@@ -1,0 +1,141 @@
+place,latitude,longitude,date,min_temperature,max_temperature,humidity,wind_speed,weather
+Berea,-29.15,27.72,2025-06-22,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-23,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-24,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-25,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-26,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-27,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-28,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-29,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-06-30,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-07-01,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-07-02,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-07-03,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-07-04,10,18,74,11,Snowy
+Berea,-29.15,27.72,2025-07-05,10,18,74,11,Snowy
+Butha-Buthe,-28.77,28.25,2025-06-22,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-23,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-24,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-25,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-26,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-27,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-28,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-29,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-06-30,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-07-01,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-07-02,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-07-03,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-07-04,5,16,30,16,Partly Cloudy
+Butha-Buthe,-28.77,28.25,2025-07-05,5,16,30,16,Partly Cloudy
+Leribe,-28.87,28.05,2025-06-22,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-23,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-24,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-25,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-26,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-27,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-28,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-29,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-06-30,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-07-01,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-07-02,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-07-03,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-07-04,-2,12,34,7,Windy
+Leribe,-28.87,28.05,2025-07-05,-2,12,34,7,Windy
+Mafeteng,-29.82,27.25,2025-06-22,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-23,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-24,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-25,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-26,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-27,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-28,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-29,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-06-30,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-07-01,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-07-02,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-07-03,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-07-04,8,17,32,11,Snowy
+Mafeteng,-29.82,27.25,2025-07-05,8,17,32,11,Snowy
+Maseru,-29.31,27.48,2025-06-22,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-23,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-24,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-25,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-26,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-27,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-28,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-29,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-06-30,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-07-01,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-07-02,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-07-03,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-07-04,8,24,33,11,Cloudy
+Maseru,-29.31,27.48,2025-07-05,8,24,33,11,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-22,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-23,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-24,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-25,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-26,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-27,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-28,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-29,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-06-30,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-07-01,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-07-02,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-07-03,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-07-04,-3,21,35,13,Cloudy
+Mohale's Hoek,-30.15,27.47,2025-07-05,-3,21,35,13,Cloudy
+Mokhotlong,-29.29,29.06,2025-06-22,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-23,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-24,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-25,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-26,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-27,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-28,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-29,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-06-30,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-07-01,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-07-02,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-07-03,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-07-04,8,22,47,9,Partly Cloudy
+Mokhotlong,-29.29,29.06,2025-07-05,8,22,47,9,Partly Cloudy
+Qacha's Nek,-30.12,28.69,2025-06-22,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-23,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-24,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-25,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-26,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-27,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-28,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-29,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-06-30,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-07-01,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-07-02,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-07-03,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-07-04,-1,20,50,18,Rainy
+Qacha's Nek,-30.12,28.69,2025-07-05,-1,20,50,18,Rainy
+Quthing,-30.41,27.7,2025-06-22,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-23,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-24,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-25,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-26,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-27,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-28,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-29,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-06-30,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-07-01,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-07-02,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-07-03,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-07-04,0,9,52,9,Rainy
+Quthing,-30.41,27.7,2025-07-05,0,9,52,9,Rainy
+Thaba-Tseka,-29.52,28.6,2025-06-22,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-23,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-24,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-25,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-26,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-27,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-28,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-29,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-06-30,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-07-01,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-07-02,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-07-03,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-07-04,4,8,51,12,Partly Cloudy
+Thaba-Tseka,-29.52,28.6,2025-07-05,4,8,51,12,Partly Cloudy

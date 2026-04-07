@@ -1,0 +1,11 @@
+alert_type,severity,description,affected_region
+Snowfall Warning,Severe,"Heavy snowfall expected, roads may be impassable. Travel with caution.",Moteng Mokhotlong
+Heavy Rainfall Alert,Moderate,"Heavy rains expected, risk of flooding in low-lying areas.",Maseru
+Strong Wind Advisory,Low,"Strong winds expected, secure outdoor items and avoid open areas.",Thaba-Tseka
+Cold Wave Alert,Extreme,"Extreme cold temperatures expected, dress warmly and limit outdoor exposure.",Mokhotlong
+Flood Warning,Severe,"River levels rising, risk of flooding in surrounding villages.",Quthing
+Frost Advisory,Low,"Low temperatures may damage crops. Farmers advised to take precautions.",Leribe
+Severe Thunderstorm Warning,Severe,"Thunderstorms with hail expected. Stay indoors if possible.",Butha-Buthe
+Heatwave Alert,Moderate,"High temperatures expected, stay hydrated and avoid prolonged sun exposure.",Mafeteng
+Dense Fog Advisory,Low,"Reduced visibility due to fog. Drive cautiously on mountain passes.",Semonkong
+Landslide Warning,Severe,"Heavy rain may trigger landslides in hilly areas. Exercise caution.",Qacha's Nek
