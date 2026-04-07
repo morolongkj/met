@@ -1,0 +1,23 @@
+# Ignore node_modules in Angular and Ionic projects
+metClientWeb/node_modules/
+
+# Ignore Angular build outputs
+metClientWeb/dist/
+
+# Ignore environment files (Angular/Ionic)
+# metClientWeb/src/environments/environment*.ts
+# metClientMobile/src/environments/environment*.ts
+
+# Ignore Composer dependencies and cache (CodeIgniter 4)
+metWebAPI/vendor/
+metWebAPI/.env
+metWebAPI/writable/cache/
+metWebAPI/writable/logs/
+metWebAPI/writable/session/
+
+# System / IDE files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+*.swp
