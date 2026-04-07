@@ -1,1 +1,195 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --lms-sky: #1da4da;
+  --lms-sky-deep: #117fb0;
+  --lms-earth: #97380f;
+  --lms-earth-deep: #6f280a;
+  --lms-green: #2e963c;
+  --lms-green-deep: #216f2c;
+  --lms-cream: #f7f1e3;
+  --lms-ink: #1c2126;
+  --lms-muted: #5f6770;
+  --lms-border: rgba(31, 52, 43, 0.12);
+  background-color: #f6f0e5;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(29, 164, 218, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbf7ef 0%, #f2e6d3 100%);
+  color: var(--lms-ink);
+}
+
+.page-shell {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  background:
+    linear-gradient(180deg, var(--lms-sky) 0 58%, var(--lms-earth) 58% 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.28), transparent 14%),
+    radial-gradient(circle at 26% 24%, rgba(255, 255, 255, 0.24), transparent 12%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0 58%, rgba(0, 0, 0, 0.08) 58% 100%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.92);
+  border: 3px solid rgba(247, 241, 227, 0.65);
+  box-shadow: 0 1rem 2rem rgba(28, 33, 38, 0.22);
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--lms-cream);
+}
+
+.btn-download {
+  min-width: 240px;
+}
+
+.hero-download-btn {
+  color: var(--lms-earth-deep);
+}
+
+.hero-download-btn:hover {
+  color: var(--lms-earth-deep);
+  background: #fff4de;
+}
+
+.platform-badge {
+  background: rgba(247, 241, 227, 0.95);
+  color: var(--lms-green-deep);
+  border: 1px solid rgba(46, 150, 60, 0.18);
+}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 251, 245, 0.96) !important;
+  border-color: rgba(247, 241, 227, 0.85) !important;
+}
+
+.weather-card {
+  background:
+    linear-gradient(155deg, var(--lms-green) 0%, #3cab4c 48%, var(--lms-sky-deep) 100%);
+}
+
+.forecast-badge {
+  background: linear-gradient(135deg, var(--lms-earth) 0%, #b85a22 100%);
+}
+
+.feature-card {
+  background: rgba(255, 251, 245, 0.95);
+  border-color: var(--lms-border) !important;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--lms-sky-deep);
+  background: rgba(29, 164, 218, 0.14);
+}
+
+.feature-icon-green {
+  background: var(--lms-green);
+}
+
+.feature-icon-brown {
+  background: var(--lms-earth);
+}
+
+.feature-card h5 {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.features h2,
+.download h2 {
+  color: var(--lms-earth-deep);
+}
+
+.text-muted {
+  color: var(--lms-muted) !important;
+}
+
+.download {
+  background:
+    linear-gradient(180deg, rgba(46, 150, 60, 0.08), rgba(151, 56, 15, 0.08)),
+    rgba(255, 250, 243, 0.9);
+  border-top: 1px solid rgba(151, 56, 15, 0.1);
+  border-bottom: 1px solid rgba(151, 56, 15, 0.1);
+}
+
+.download .btn {
+  font-size: 1.05rem;
+}
+
+.download-cta {
+  background: linear-gradient(135deg, var(--lms-green) 0%, var(--lms-green-deep) 100%);
+  border: none;
+  color: #fff;
+}
+
+.download-cta:hover {
+  background: linear-gradient(135deg, #37a948 0%, #255f2f 100%);
+  color: #fff;
+}
+
+.site-footer {
+  background: linear-gradient(180deg, var(--lms-earth-deep) 0%, #4f1b06 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 575.98px) {
+  .brand-lockup {
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}

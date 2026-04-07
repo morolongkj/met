@@ -18,7 +18,7 @@ class RunSeeder extends BaseCommand
         $seeder->call('StationStatusSeeder');
         $seeder->call('ObservationSeeder');
         $seeder->call('ForecastSeeder');
-        $seeder->call('NotificationSeeder');
+        // $seeder->call('NotificationSeeder');
         $seeder->call('DailyForecastSeeder');
         $seeder->call('HourlyForecastSeeder');
         CLI::write('Seeder executed successfully at ' . date('Y-m-d H:i:s'), 'green');

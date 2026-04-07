@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
         $this->call('StationSeeder');
         $this->call('StationMeasureSeeder');
         $this->call('StationStatusSeeder');
-        $this->call('ObservationSeeder');
+        // $this->call('ObservationSeeder');
         // $this->call('ForecastSeeder');
         // $this->call('NotificationSeeder');
         // $this->call('DailyForecastSeeder');

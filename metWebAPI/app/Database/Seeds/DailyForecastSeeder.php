@@ -7,9 +7,16 @@ use CodeIgniter\Database\Seeder;
 
 class DailyForecastSeeder extends Seeder
 {
+    use RemoteCsvSeederTrait;
+
     public function run()
     {
-        $filePath = WRITEPATH . 'uploads/daily_forecast.csv'; // Path to CSV
+        $filePath = $this->resolveCsvPath('DailyFcWx.csv');
+        if (! $filePath) {
+            echo "CSV file not found locally and remote download failed: DailyFcWx.csv";
+            return;
+        }
+
         $csvFile  = fopen($filePath, 'r');
 
         if (! $csvFile) {
@@ -23,7 +30,11 @@ class DailyForecastSeeder extends Seeder
         $dailyForecastModel = new DailyForecastModel();
 
         while (($row = fgetcsv($csvFile, 1000, ",")) !== false) {
-            list($place, $latitude, $longitude, $date, $min_temp, $max_temp, $humidity, $wind_speed, $weather) = $row;
+            if (! is_array($row) || count($row) < 9) {
+                continue;
+            }
+
+            list($place, $latitude, $longitude, $date, $min_temp, $max_temp, $humidity, $wind_speed, $weather) = array_map('trim', $row);
 
             // Check if location exists
             $location = $locationModel->where(['latitude' => $latitude, 'longitude' => $longitude])->first();

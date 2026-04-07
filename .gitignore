@@ -2,7 +2,7 @@
 metClientWeb/node_modules/
 
 # Ignore Angular build outputs
-metClientWeb/dist/
+# metClientWeb/dist/
 
 # Ignore environment files (Angular/Ionic)
 # metClientWeb/src/environments/environment*.ts
@@ -10,7 +10,7 @@ metClientWeb/dist/
 
 # Ignore Composer dependencies and cache (CodeIgniter 4)
 metWebAPI/vendor/
-metWebAPI/.env
+# metWebAPI/.env
 metWebAPI/writable/cache/
 metWebAPI/writable/logs/
 metWebAPI/writable/session/

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "RunObservationSeeder",
+        "type": "command",
+        "action": "db:seed ObservationSeeder",
+        "environment": null,
+        "start_at": "2026-04-07 05:48:15",
+        "end_at": "2026-04-07 05:48:16",
+        "duration": "00:00:00",
+        "output": "\"Successfully seeded observations from external API.\\n\"",
+        "error": null,
+        "test_time": null
+    },
+    {
+        "name": "RunObservationSeeder",
+        "type": "command",
+        "action": "db:seed ObservationSeeder",
+        "environment": null,
+        "start_at": "2026-04-07 05:26:38",
+        "end_at": "2026-04-07 05:26:39",
+        "duration": "00:00:00",
+        "output": "\"Successfully seeded observations from external API.\\n\"",
+        "error": null,
+        "test_time": null
+    },
+    {
+        "name": "RunObservationSeeder",
+        "type": "command",
+        "action": "db:seed ObservationSeeder",
+        "environment": null,
+        "start_at": "2026-04-07 05:24:51",
+        "end_at": "2026-04-07 05:24:52",
+        "duration": "00:00:00",
+        "output": "\"Successfully seeded observations from external API.\\n\"",
+        "error": null,
+        "test_time": null
+    }
+]

@@ -131,9 +131,12 @@ class CronJob extends \Daycry\CronJob\Config\CronJob
 
         // $schedule->call( function() { do something.... } )->everyMonday()->named( 'foo' )
         $schedule->url(base_url('cron/manage-log'))->named("LogMyMessage")->everyMinute(10);
-        // Add a new task to run the Seeder command every 10 minutes
-$schedule->command('seeder:run')->named("RunSeeder")->everyMinute(2);
-
-
+        // Run observation and station seeders every 2 minutes
+        $schedule->command('db:seed DatabaseSeeder')->named("RunDatabaseSeeder")->everyMinute(2);
+        $schedule->command('db:seed ObservationSeeder')->named("RunObservationSeeder")->everyMinute(2);
+        
+        // Run daily and hourly forecast seeders daily at 12 AM
+        $schedule->command('db:seed DailyForecastSeeder')->named("RunDailyForecastSeeder")->daily('12:00 am');
+        $schedule->command('db:seed HourlyForecastSeeder')->named("RunHourlyForecastSeeder")->daily('12:00 am');
     }
 }

@@ -20,7 +20,18 @@ class DistrictSeeder extends Seeder
             ['name' => 'Teyateyaneng'],
         ];
 
-        // Using Query Builder to insert data
-        $this->db->table('districts')->insertBatch($data);
+        // Get existing district names
+        $existing = $this->db->table('districts')->select('name')->get()->getResultArray();
+        $existingNames = array_column($existing, 'name');
+
+        // Filter out existing districts
+        $newData = array_filter($data, function($district) use ($existingNames) {
+            return !in_array($district['name'], $existingNames);
+        });
+
+        // Insert only new districts
+        if (!empty($newData)) {
+            $this->db->table('districts')->insertBatch($newData);
+        }
     }
 }
