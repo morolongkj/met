@@ -119,3 +119,5 @@ class HourlyForecastSeeder extends Seeder
         ]);
     }
 }
+
+// edited

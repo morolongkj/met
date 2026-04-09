@@ -105,3 +105,4 @@ class DailyForecastSeeder extends Seeder
         ]);
     }
 }
+// edited
