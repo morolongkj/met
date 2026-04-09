@@ -11,8 +11,11 @@ class DailyForecastSeeder extends Seeder
 
     public function run()
     {
+        log_message('info', 'DailyForecastSeeder started');
+
         $filePath = $this->resolveCsvPath('DailyFcWx.csv');
         if (! $filePath) {
+            log_message('error', 'DailyForecastSeeder failed because CSV could not be resolved');
             echo "CSV file not found locally and remote download failed: DailyFcWx.csv";
             return;
         }
@@ -20,6 +23,9 @@ class DailyForecastSeeder extends Seeder
         $csvFile  = fopen($filePath, 'r');
 
         if (! $csvFile) {
+            log_message('error', 'DailyForecastSeeder failed opening CSV file: {path}', [
+                'path' => $filePath,
+            ]);
             echo "CSV file not found!";
             return;
         }
@@ -28,11 +34,19 @@ class DailyForecastSeeder extends Seeder
 
         $locationModel      = new LocationModel();
         $dailyForecastModel = new DailyForecastModel();
+        $processedRows      = 0;
+        $skippedRows        = 0;
+        $insertedLocations  = 0;
+        $insertedForecasts  = 0;
+        $updatedForecasts   = 0;
 
         while (($row = fgetcsv($csvFile, 1000, ",")) !== false) {
             if (! is_array($row) || count($row) < 9) {
+                $skippedRows++;
                 continue;
             }
+
+            $processedRows++;
 
             list($place, $latitude, $longitude, $date, $min_temp, $max_temp, $humidity, $wind_speed, $weather) = array_map('trim', $row);
 
@@ -44,6 +58,7 @@ class DailyForecastSeeder extends Seeder
                     'latitude'  => $latitude,
                     'longitude' => $longitude,
                 ], true);
+                $insertedLocations++;
             } else {
                 $locationID = $location['id'];
             }
@@ -63,6 +78,7 @@ class DailyForecastSeeder extends Seeder
                     'wind_speed'      => $wind_speed,
                     'weather'         => $weather,
                 ]);
+                $updatedForecasts++;
             } else {
                 // Insert new daily forecast
                 $dailyForecastModel->insert([
@@ -74,9 +90,18 @@ class DailyForecastSeeder extends Seeder
                     'wind_speed'      => $wind_speed,
                     'weather'         => $weather,
                 ]);
+                $insertedForecasts++;
             }
         }
 
         fclose($csvFile);
+
+        log_message('info', 'DailyForecastSeeder completed. Processed: {processed}, Skipped: {skipped}, New locations: {locations}, Inserts: {inserts}, Updates: {updates}', [
+            'processed' => $processedRows,
+            'skipped'   => $skippedRows,
+            'locations' => $insertedLocations,
+            'inserts'   => $insertedForecasts,
+            'updates'   => $updatedForecasts,
+        ]);
     }
 }

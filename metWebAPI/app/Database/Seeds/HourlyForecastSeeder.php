@@ -12,8 +12,11 @@ class HourlyForecastSeeder extends Seeder
 
     public function run()
     {
+        log_message('info', 'HourlyForecastSeeder started');
+
         $filePath = $this->resolveCsvPath('HrlyFcWx.csv');
         if (! $filePath) {
+            log_message('error', 'HourlyForecastSeeder failed because CSV could not be resolved');
             echo "CSV file not found locally and remote download failed: HrlyFcWx.csv";
             return;
         }
@@ -21,6 +24,9 @@ class HourlyForecastSeeder extends Seeder
         $csvFile  = fopen($filePath, 'r');
 
         if (! $csvFile) {
+            log_message('error', 'HourlyForecastSeeder failed opening CSV file: {path}', [
+                'path' => $filePath,
+            ]);
             echo "CSV file not found!";
             return;
         }
@@ -30,11 +36,20 @@ class HourlyForecastSeeder extends Seeder
         $locationModel       = new LocationModel();
         $dailyForecastModel  = new DailyForecastModel();
         $hourlyForecastModel = new HourlyForecastModel();
+        $processedRows       = 0;
+        $skippedRows         = 0;
+        $insertedLocations   = 0;
+        $insertedDaily       = 0;
+        $insertedHourly      = 0;
+        $updatedHourly       = 0;
 
         while (($row = fgetcsv($csvFile, 1000, ",")) !== false) {
             if (! is_array($row) || count($row) < 9) {
+                $skippedRows++;
                 continue;
             }
+
+            $processedRows++;
 
             list($place, $latitude, $longitude, $date, $time, $temperature, $humidity, $wind_speed, $weather) = array_map('trim', $row);
 
@@ -46,6 +61,7 @@ class HourlyForecastSeeder extends Seeder
                     'latitude'  => $latitude,
                     'longitude' => $longitude,
                 ], true);
+                $insertedLocations++;
             } else {
                 $locationID = $location['id'];
             }
@@ -57,6 +73,7 @@ class HourlyForecastSeeder extends Seeder
                     'location_id' => $locationID,
                     'date'        => $date,
                 ], true);
+                $insertedDaily++;
             } else {
                 $dailyForecastID = $dailyForecast['id'];
             }
@@ -75,6 +92,7 @@ class HourlyForecastSeeder extends Seeder
                     'wind_speed'  => $wind_speed,
                     'weather'     => $weather,
                 ]);
+                $updatedHourly++;
             } else {
                 // Insert new hourly forecast
                 $hourlyForecastModel->insert([
@@ -85,9 +103,19 @@ class HourlyForecastSeeder extends Seeder
                     'wind_speed'        => $wind_speed,
                     'weather'           => $weather,
                 ]);
+                $insertedHourly++;
             }
         }
 
         fclose($csvFile);
+
+        log_message('info', 'HourlyForecastSeeder completed. Processed: {processed}, Skipped: {skipped}, New locations: {locations}, New daily forecasts: {daily}, Inserts: {inserts}, Updates: {updates}', [
+            'processed' => $processedRows,
+            'skipped'   => $skippedRows,
+            'locations' => $insertedLocations,
+            'daily'     => $insertedDaily,
+            'inserts'   => $insertedHourly,
+            'updates'   => $updatedHourly,
+        ]);
     }
 }
