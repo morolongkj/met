@@ -7,7 +7,16 @@ trait RemoteCsvSeederTrait
     {
         $localPath = WRITEPATH . 'uploads/' . $filename;
 
-        log_message('info', 'Remote CSV seeder refreshing local CSV from remote source: {csv_name}', [
+        if (is_file($localPath) && filesize($localPath) > 0) {
+            log_message('info', 'Remote CSV seeder using existing local file: {csv_name} ({csv_path})', [
+                'csv_name' => $filename,
+                'csv_path' => $localPath,
+            ]);
+
+            return $localPath;
+        }
+
+        log_message('info', 'Remote CSV seeder local file missing or empty, attempting download: {csv_name}', [
             'csv_name' => $filename,
         ]);
 
