@@ -7,16 +7,7 @@ trait RemoteCsvSeederTrait
     {
         $localPath = WRITEPATH . 'uploads/' . $filename;
 
-        if (is_file($localPath) && filesize($localPath) > 0) {
-            log_message('info', 'Remote CSV seeder using existing local file: {csv_name} ({csv_path})', [
-                'csv_name' => $filename,
-                'csv_path' => $localPath,
-            ]);
-
-            return $localPath;
-        }
-
-        log_message('info', 'Remote CSV seeder local file missing or empty, attempting download: {csv_name}', [
+        log_message('info', 'Remote CSV seeder attempting remote download first: {csv_name}', [
             'csv_name' => $filename,
         ]);
 
@@ -28,7 +19,16 @@ trait RemoteCsvSeederTrait
             return $localPath;
         }
 
-        log_message('error', 'Remote CSV seeder could not resolve file locally or remotely: {csv_name}. Ensure the CSV exists in writable/uploads, install sshpass for password-based SCP, or use SSH key auth.', [
+        if (is_file($localPath) && filesize($localPath) > 0) {
+            log_message('warning', 'Remote CSV seeder falling back to existing local file after remote download failed: {csv_name} ({csv_path})', [
+                'csv_name' => $filename,
+                'csv_path' => $localPath,
+            ]);
+
+            return $localPath;
+        }
+
+        log_message('error', 'Remote CSV seeder could not resolve file remotely and no usable local fallback exists: {csv_name}. Ensure the remote CSV is available, or place the file in writable/uploads. Install sshpass for password-based SCP, or use SSH key auth.', [
             'csv_name' => $filename,
         ]);
 
